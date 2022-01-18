@@ -1,0 +1,23 @@
+.obiective {
+  margin: 1.5rem;
+}
+.form-control {
+  width: 30%;
+}
+.obiective > h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+.form-control {
+  margin-bottom: 10px;
+}
+.adauga_obiective > div {
+  width: 14%;
+  float: left;
+  margin: 2px;
+}
+
+.adauga_obiective > div li:hover {
+  background-color: lightslategrey;
+}
