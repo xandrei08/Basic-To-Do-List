@@ -19,10 +19,12 @@ function adaugaObiectiv() {
   li.appendChild(text);
   li.classList.add("list-group-item");
   let lista;
+  let appendDate = li.append(date);
 
   switch (day) {
     case "Monday":
       lista = document.getElementById("day_1");
+      appendDate;
       li.addEventListener("click", function () {
         li.style.textDecoration = "line-through";
         date.style.textAlign = "right";
@@ -30,37 +32,43 @@ function adaugaObiectiv() {
       break;
     case "Tuesday":
       lista = document.getElementById("day_2");
+      appendDate;
       li.addEventListener("click", function () {
         li.remove();
       });
       break;
     case "Wednesday":
       lista = document.getElementById("day_3");
+      appendDate;
       li.addEventListener("click", function () {
         li.style.textDecoration = "underline";
       });
       break;
     case "Thursday":
       lista = document.getElementById("day_4");
+      appendDate;
       li.addEventListener("click", function () {
         li.style.textDecoration = "line-through";
         date.style.textDecoration = "line-through";
       });
       break;
-    case "friday":
+    case "Friday":
       lista = document.getElementById("day_5");
+      appendDate;
       li.addEventListener("click", function () {
         li.style.textDecoration = "line-through";
       });
       break;
-    case "Saturday":
-      lista = document.getElementById("day_6");
+    case "Things":
+      lista = document.getElementById("note-1");
+      appendDate;
       li.addEventListener("click", function () {
         li.style.textDecoration = "line-through";
       });
       break;
-    case "Sunday":
-      lista = document.getElementById("day_7");
+    case "Note":
+      lista = document.getElementById("note-2");
+      appendDate;
       li.addEventListener("click", function () {
         li.style.textDecoration = "line-through";
       });
@@ -70,5 +78,4 @@ function adaugaObiectiv() {
       return;
   }
   lista.appendChild(li);
-  lista.append(date);
 }

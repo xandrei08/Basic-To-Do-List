@@ -1,3 +1,18 @@
+body {
+  margin: 0 5rem;
+}
+.card-header {
+  font-size: 20px;
+  text-align: center;
+}
+.list-gorup-item,
+#day_1,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
 .obiective {
   margin: 1.5rem;
 }
@@ -13,11 +28,21 @@
   margin-bottom: 10px;
 }
 .adauga_obiective > div {
-  width: 14%;
-  float: left;
-  margin: 2px;
+  width: 30%;
+  display: inline-block;
+  height: 15rem;
+}
+.adauga_boeictive > div li {
+  margin: 0;
+  padding: 0;
 }
 
 .adauga_obiective > div li:hover {
   background-color: lightslategrey;
+}
+
+.addNotes > div {
+  width: 45.3%;
+  float: left;
+  height: 15rem;
 }
