@@ -20,54 +20,115 @@
   <body>
     <div class="obiective">
       <h1>Weekly Planner</h1>
-      <div class="form-group">
+      <div class="form-group header-container">
         <input
           type="text"
-          class="form-control"
-          placeholder="Task"
-          id="obiectiv"
+          class="form-control firstName"
+          placeholder="First name"
         />
-        <input type="text" class="form-control" placeholder="Day" id="day" />
-        <input type="date" class="form-control" placeholder="date" id="date" />
-        <button class="btn btn-primary" onclick="adaugaObiectiv()">
-          Submit
-        </button>
+        <input
+          type="text"
+          class="form-control lastName"
+          placeholder="Last name"
+        />
+        <input type="date" class="form-control date" placeholder="date" />
+        <button class="btn btn-primary" onclick="info()">Submit</button>
       </div>
+    </div>
+    <div class="header">
+      <button class="btn btn2 btn-primary" onclick="reset()">Reset Name</button>
     </div>
     <div class="adauga_obiective">
       <div class="card">
         <div class="card-header">Monday</div>
-        <ul class="list-group list-group-flush" id="day_1"></ul>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control monday"
+            placeholder="Add your task"
+          />
+          <button class="submit2" onclick="taskList()">Submit</button>
+        </div>
       </div>
       <div class="card">
         <div class="card-header">Tuesday</div>
-        <ul class="list-group list-group-flush" id="day_2"></ul>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control tuesday"
+            placeholder="Add your task"
+          />
+          <button class="submit2" onclick="taskList()">Submit</button>
+        </div>
       </div>
       <div class="card">
         <div class="card-header">Wednesday</div>
-        <ul class="list-group list-group-flush" id="day_3"></ul>
+        <!-- <ul class="list-group list-group-flush" id="day_3"></ul> -->
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control wednesday"
+            placeholder="Add your task"
+          />
+          <button class="submit2" onclick="taskList()">Submit</button>
+        </div>
       </div>
       <div class="card">
         <div class="card-header">Thursday</div>
-        <ul class="list-group list-group-flush" id="day_4"></ul>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control thursday"
+            placeholder="Add your task"
+          />
+          <button class="submit2" onclick="taskList()">Submit</button>
+        </div>
       </div>
       <div class="card">
         <div class="card-header">Friday</div>
-        <ul class="list-group list-group-flush" id="day_5"></ul>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control friday"
+            placeholder="Add your task"
+          />
+          <button class="submit2" onclick="taskList()">Submit</button>
+        </div>
       </div>
       <div class="card">
         <div class="card-header">Weekend</div>
-        <ul class="list-group list-group-flush" id="day_6"></ul>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control weekend"
+            placeholder="Add your task"
+          />
+          <button class="submit2" onclick="taskList()">Submit</button>
+        </div>
       </div>
     </div>
     <div class="addNotes">
       <div class="card">
-        <div class="card-header">Top 3 things to do</div>
-        <ul class="list-group list-group-flush" id="note-1"></ul>
+        <div class="card-header">Top 4 things to do</div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control things"
+            placeholder="Add your task"
+          />
+          <button class="submit2" onclick="taskList()">Submit</button>
+        </div>
       </div>
       <div class="card">
         <div class="card-header">Notes</div>
-        <ul class="list-group list-group-flush" id="note-2"></ul>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control cardNotes"
+            placeholder="Add your task"
+          />
+          <button class="submit2" onclick="taskList()">Submit</button>
+        </div>
       </div>
     </div>
     <script src="main.js"></script>
