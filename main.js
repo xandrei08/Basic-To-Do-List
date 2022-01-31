@@ -79,7 +79,6 @@
 //   }
 //   lista.appendChild(li);
 // }
-let btn = document.querySelector(".btn2");
 let headerContainer = document.querySelector(".header-container");
 let header = document.querySelector(".header");
 let infos1;
@@ -118,18 +117,80 @@ function info() {
   }
 }
 
-function taskList() {
-  let monday = document.querySelector(".monday").value;
-  let tuesday = document.querySelector(".tuesday").value;
-  let wednesday = document.querySelector(".wednesday").value;
-  let thursday = document.querySelector(".thursday").value;
-  let friday = document.querySelector(".friday").value;
-  let things = document.querySelector(".things").value;
-  let cardNotes = document.querySelector(".cardNotes").vlaue;
-  let array = [monday, tuesday, wednesday, thursday, friday, things, cardNotes];
-  for (let array1 of array) {
-    if (array1.length === 0) {
-      alert("It doesn't work");
+let monday = document.querySelector(".monday");
+let tuesday = document.querySelector(".tuesday");
+let wednesday = document.querySelector(".wednesday");
+let thursday = document.querySelector(".thursday");
+let friday = document.querySelector(".friday");
+let weekend = document.querySelector(".weekend");
+let things = document.querySelector(".things");
+let cardNotes = document.querySelector(".cardNotes");
+let array = [];
+array.push(monday, tuesday, wednesday, thursday, friday, things, cardNotes);
+
+// buttons
+let btn1 = document.querySelector(".submit1");
+let btn2 = document.querySelector(".submit2");
+let btn3 = document.querySelector(".submit3");
+let btn4 = document.querySelector(".submit4");
+let btn5 = document.querySelector(".submit5");
+let btn6 = document.querySelector(".submit6");
+let btn7 = document.querySelector(".submit7");
+let btn8 = document.querySelector(".submit8");
+let count = 0;
+
+// Cards Containers
+let card1 = document.querySelector(".card1");
+let card2 = document.querySelector(".card2");
+let card3 = document.querySelector(".card3");
+let card4 = document.querySelector(".card4");
+let card5 = document.querySelector(".card5");
+let card6 = document.querySelector(".card6");
+let card7 = document.querySelector(".card7");
+let card8 = document.querySelector(".card8");
+
+// Module
+function module1(value, btn, card) {
+  value = value.value;
+  if (value.length === 0) {
+    alert("Add your task please");
+  } else {
+    let li = document.createElement("li");
+    let text = value;
+    li.append(text);
+    card.append(li);
+    li.addEventListener("click", function () {
+      li.remove();
+    });
+    count++;
+    if (count === 5) {
+      btn.disabled = true;
     }
   }
 }
+
+// Event Listenres
+btn1.addEventListener("click", function () {
+  module1(monday, btn1, card1);
+});
+btn2.addEventListener("click", function () {
+  module1(tuesday, btn2, card2);
+});
+btn3.addEventListener("click", function () {
+  module1(wednesday, btn3, card3);
+});
+btn4.addEventListener("click", function () {
+  module1(thursday, btn4, card4);
+});
+btn5.addEventListener("click", function () {
+  module1(friday, btn5, card5);
+});
+btn6.addEventListener("click", function () {
+  module1(weekend, btn6, card6);
+});
+btn7.addEventListener("click", function () {
+  module1(things, btn7, card7);
+});
+btn8.addEventListener("click", function () {
+  module1(cardNotes, btn8, card8);
+});
