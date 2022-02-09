@@ -1,59 +1,47 @@
 body {
   margin: 0 5rem;
 }
-.form-group {
-  width: 25.3rem;
-}
-.card-header {
-  font-size: 20px;
+h1 {
   text-align: center;
-}
-.list-gorup-item,
-#day_1,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-.obiective {
-  margin: 1.5rem;
-}
-.obiective > h1 {
-  text-align: center;
-  margin: 2rem 0;
   font-size: 2rem;
+  margin-top: 1rem;
 }
-div > input,
-.form-control {
-  width: 100%;
+.personal-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-.adauga_obiective > div {
+.show-infos {
+  margin-top: 7rem;
   width: 30%;
-  display: inline-block;
-  height: 15rem;
-}
-.adauga_boeictive > div li {
-  margin: 0;
-  padding: 0;
 }
 
-.adauga_obiective > div li:hover {
-  background-color: lightslategrey;
-}
-
-.addNotes > div {
+div > .form-group.header-container {
+  margin-top: 7rem;
   width: 30%;
-  float: left;
-  height: 15rem;
+}
+div > .form-control.firstName,
+.form-control.lastName,
+.form-control.date {
+  margin-top: 0.2rem;
 }
 
-.form-li {
-  font-size: 1.6rem;
-  margin-bottom: 0.2rem;
+.btn {
+  margin-top: 0.2rem;
 }
-.btn2 {
-  margin-left: 30%;
-  margin-bottom: 0.2%;
-  display: none;
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.btn,
+.card-title,
+h4 {
+  margin-left: 1rem;
+}
+.container {
+  margin: 2rem 0 0 11rem;
 }

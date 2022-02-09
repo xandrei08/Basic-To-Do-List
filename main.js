@@ -1,196 +1,177 @@
-// function adaugaObiectiv() {
-//   var obiectiv = document.getElementById("obiectiv").value;
-//   var day = document.getElementById("day").value;
-//   var date = document.getElementById("date").value;
-//   if (obiectiv.length === 0) {
-//     alert("Te rog adauga Obiectiv!");
-//   } else if (day.length === 0) {
-//     alert("Te rog adauga o prioritate mai mare de 0!");
-//   } else if (date.length === 0) {
-//     alert("Te rog adauga o data");
-//     return;
-//   } else {
-//     document.getElementById("obiectiv").value = "";
-//     document.getElementById("day").value = "";
-//     document.getElementById("date").value = "";
-//   }
-//   let li = document.createElement("li");
-//   let text = document.createTextNode(obiectiv);
-//   li.appendChild(text);
-//   li.classList.add("list-group-item");
-//   let lista;
-//   let appendDate = li.append(date);
+// Personal Information
+let userInfos = document.querySelector(".user-infos");
+let submitBtn = document.querySelector(".btn-primary");
 
-//   switch (day) {
-//     case "Monday":
-//       lista = document.getElementById("day_1");
-//       appendDate;
-//       li.addEventListener("click", function () {
-//         li.style.textDecoration = "line-through";
-//         date.style.textAlign = "right";
-//       });
-//       break;
-//     case "Tuesday":
-//       lista = document.getElementById("day_2");
-//       appendDate;
-//       li.addEventListener("click", function () {
-//         li.remove();
-//       });
-//       break;
-//     case "Wednesday":
-//       lista = document.getElementById("day_3");
-//       appendDate;
-//       li.addEventListener("click", function () {
-//         li.style.textDecoration = "underline";
-//       });
-//       break;
-//     case "Thursday":
-//       lista = document.getElementById("day_4");
-//       appendDate;
-//       li.addEventListener("click", function () {
-//         li.style.textDecoration = "line-through";
-//         date.style.textDecoration = "line-through";
-//       });
-//       break;
-//     case "Friday":
-//       lista = document.getElementById("day_5");
-//       appendDate;
-//       li.addEventListener("click", function () {
-//         li.style.textDecoration = "line-through";
-//       });
-//       break;
-//     case "Things":
-//       lista = document.getElementById("note-1");
-//       appendDate;
-//       li.addEventListener("click", function () {
-//         li.style.textDecoration = "line-through";
-//       });
-//       break;
-//     case "Note":
-//       lista = document.getElementById("note-2");
-//       appendDate;
-//       li.addEventListener("click", function () {
-//         li.style.textDecoration = "line-through";
-//       });
-//       break;
-//     default:
-//       alert("Type first letter of days with uppercase!");
-//       return;
-//   }
-//   lista.appendChild(li);
-// }
-let headerContainer = document.querySelector(".header-container");
-let header = document.querySelector(".header");
-let infos1;
-
-function info() {
+submitBtn.addEventListener("click", function () {
   let firstName = document.querySelector(".firstName").value;
   let lastName = document.querySelector(".lastName").value;
   let date = document.querySelector(".date").value;
 
   if (firstName.length === 0) {
-    alert("Add your first Name");
+    alert("Please add your firstName");
   } else if (lastName.length === 0) {
-    alert("Add your last name");
+    alert("Please add your last name");
   } else if (date.length === 0) {
-    alert("Please select date!");
+    alert("Please select the date");
   } else {
-    document.querySelector(".firstName").value = " ";
-    document.querySelector(".lastName").value = " ";
-    document.querySelector(".date").value = " ";
-    let ul = document.createElement("ul");
     let li = document.createElement("li");
-    let li1 = document.createElement("li");
+    li.classList = "user-info";
     let li2 = document.createElement("li");
-    li.append(firstName);
-    li.classList.add("form-li");
-    li1.append(lastName);
-    li1.classList.add("form-li");
-    li2.append(date);
-    li2.classList.add("form-li");
-    ul.append(li, li1, li2);
-    console.log(btn);
-    header.appendChild(ul);
-    infos1 = header;
-    btn.style.display = "initial";
-    headerContainer.style.display = "none";
-  }
-}
+    li2.classList = "user-info";
+    let li3 = document.createElement("li");
+    li3.classList = "user-info";
+    li.appendChild(document.createTextNode(firstName));
+    li2.appendChild(document.createTextNode(lastName));
+    li3.appendChild(document.createTextNode(date));
+    userInfos.appendChild(li);
+    userInfos.appendChild(li2);
+    userInfos.appendChild(li3);
 
-let monday = document.querySelector(".monday");
-let tuesday = document.querySelector(".tuesday");
-let wednesday = document.querySelector(".wednesday");
-let thursday = document.querySelector(".thursday");
-let friday = document.querySelector(".friday");
-let weekend = document.querySelector(".weekend");
-let things = document.querySelector(".things");
-let cardNotes = document.querySelector(".cardNotes");
-let array = [];
-array.push(monday, tuesday, wednesday, thursday, friday, things, cardNotes);
-
-// buttons
-let btn1 = document.querySelector(".submit1");
-let btn2 = document.querySelector(".submit2");
-let btn3 = document.querySelector(".submit3");
-let btn4 = document.querySelector(".submit4");
-let btn5 = document.querySelector(".submit5");
-let btn6 = document.querySelector(".submit6");
-let btn7 = document.querySelector(".submit7");
-let btn8 = document.querySelector(".submit8");
-let count = 0;
-
-// Cards Containers
-let card1 = document.querySelector(".card1");
-let card2 = document.querySelector(".card2");
-let card3 = document.querySelector(".card3");
-let card4 = document.querySelector(".card4");
-let card5 = document.querySelector(".card5");
-let card6 = document.querySelector(".card6");
-let card7 = document.querySelector(".card7");
-let card8 = document.querySelector(".card8");
-
-// Module
-function module1(value, btn, card) {
-  value = value.value;
-  if (value.length === 0) {
-    alert("Add your task please");
-  } else {
-    let li = document.createElement("li");
-    let text = value;
-    li.append(text);
-    card.append(li);
     li.addEventListener("click", function () {
       li.remove();
     });
-    count++;
-    if (count === 5) {
-      btn.disabled = true;
+    li2.addEventListener("click", function () {
+      li2.remove();
+    });
+    li3.addEventListener("click", function () {
+      li3.remove();
+    });
+  }
+});
+
+// Add tasks
+
+const form = document.querySelector(".task-form");
+const taskInput = document.querySelector(".task");
+const clearBtn = document.querySelector(".clear-tasks");
+const filter = document.querySelector(".filter");
+const taskList = document.querySelector(".collection");
+
+// load all event listeners
+
+loadEventListeners();
+
+// Event Listeners
+function loadEventListeners() {
+  // Add task
+  form.addEventListener("submit", addTask);
+
+  // Remove task
+  taskList.addEventListener("click", removeTask);
+
+  // Clear all tasks;
+  clearBtn.addEventListener("click", clearTasks);
+
+  //Filter
+  filter.addEventListener("keyup", filterList);
+
+  // DOM load event listeners
+  document.addEventListener("DOMContentLoaded", getTasks);
+}
+
+// Store Tasks to Local Storage
+
+//Adding task Function
+function addTask(e) {
+  // Create li element
+  let li = document.createElement("li");
+  li.classList = "collection-item";
+  li.appendChild(document.createTextNode(taskInput.value));
+
+  // Create link
+  let link = document.createElement("a");
+  link.className = "delete-item secondary-content";
+  link.innerHTML = "<i class='fa fa-remove'> </i>";
+  li.appendChild(link);
+  taskList.appendChild(li);
+  // Store tasks in Local Storage
+  storeTasks(taskInput.value);
+
+  taskInput.value = " ";
+  e.preventDefault();
+}
+// Function to store tasks in Local Storage
+function storeTasks(task) {
+  let tasks;
+  if (localStorage.getItem("tasks") === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+  tasks.push(task);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function removeTask(e) {
+  if (e.target.parentElement.classList.contains("delete-item")) {
+    if (confirm("Are you sure ?")) {
+      e.target.parentElement.parentElement.remove();
+
+      removeTaskFromLocalStorage(e.target.parentElement.parentElement);
     }
   }
 }
 
-// Event Listenres
-btn1.addEventListener("click", function () {
-  module1(monday, btn1, card1);
-});
-btn2.addEventListener("click", function () {
-  module1(tuesday, btn2, card2);
-});
-btn3.addEventListener("click", function () {
-  module1(wednesday, btn3, card3);
-});
-btn4.addEventListener("click", function () {
-  module1(thursday, btn4, card4);
-});
-btn5.addEventListener("click", function () {
-  module1(friday, btn5, card5);
-});
-btn6.addEventListener("click", function () {
-  module1(weekend, btn6, card6);
-});
-btn7.addEventListener("click", function () {
-  module1(things, btn7, card7);
-});
-btn8.addEventListener("click", function () {
-  module1(cardNotes, btn8, card8);
-});
+// Remove tasks from Local Storage one by one.
+function removeTaskFromLocalStorage(taskItem) {
+  let tasks;
+  if (localStorage.getItem("tasks") === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+
+  tasks.forEach(function (task, index) {
+    if (taskItem.textContent === task) {
+      tasks.splice(index, 1);
+    }
+  });
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+// Clear All tasks
+function clearTasks() {
+  taskList.innerHTML = "";
+
+  // Clear all tasks from Local Storage
+  clearTasks();
+}
+
+function clearTasks() {
+  localStorage.clear();
+}
+
+// Filter function
+
+function filterList(e) {
+  const text = e.target.value.toLowerCase();
+  document.querySelectorAll(".collection-item").forEach(function (task) {
+    const item = task.firstChild.textContent;
+    if (item.toLowerCase().indexOf(text) != -1) {
+      task.style.display = "block";
+    } else {
+      task.style.display = "none";
+    }
+  });
+}
+
+// Get tasks from Local Storage
+function getTasks() {
+  let tasks;
+  if (localStorage.getItem("tasks") === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+  tasks.forEach(function (task) {
+    let li = document.createElement("li");
+    li.classList = "collection-item";
+    li.appendChild(document.createTextNode(task));
+
+    let link = document.createElement("a");
+    link.className = "delete-item secondary-content";
+    link.innerHTML = "<i class='fa fa-remove'></i>";
+    li.appendChild(link);
+    taskList.appendChild(li);
+  });
+}

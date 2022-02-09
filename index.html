@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>To do list</title>
   </head>
   <body>
-    <div class="obiective">
-      <h1>Weekly Planner</h1>
+    <h1>Weekly Planner</h1>
+    <div class="personal-info">
       <div class="form-group header-container">
         <input
           type="text"
@@ -32,105 +34,45 @@
           placeholder="Last name"
         />
         <input type="date" class="form-control date" placeholder="date" />
-        <button class="btn btn-primary" onclick="info()">Submit</button>
+        <button class="btn btn-primary">Submit</button>
+      </div>
+      <div class="show-infos">
+        <ul class="user-infos"></ul>
       </div>
     </div>
-    <div class="header">
-      <button class="btn btn2 btn-primary" onclick="reset()">Reset Name</button>
-    </div>
-    <div class="adauga_obiective">
-      <div class="card card1">
-        <div class="card-header">Monday</div>
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control monday"
-            placeholder="Add your task"
-          />
-          <button class="submit1">Submit</button>
-        </div>
-      </div>
-      <div class="card card2">
-        <div class="card-header">Tuesday</div>
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control tuesday"
-            placeholder="Add your task"
-          />
-          <button class="submit2">Submit</button>
-        </div>
-      </div>
-      <div class="card card3">
-        <div class="card-header">Wednesday</div>
-        <!-- <ul class="list-group list-group-flush" id="day_3"></ul> -->
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control wednesday"
-            placeholder="Add your task"
-          />
-          <button class="submit3">Submit</button>
-        </div>
-      </div>
-      <div class="card card4">
-        <div class="card-header">Thursday</div>
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control thursday"
-            placeholder="Add your task"
-          />
-          <button class="submit4">Submit</button>
-        </div>
-      </div>
-      <div class="card card5">
-        <div class="card-header">Friday</div>
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control friday"
-            placeholder="Add your task"
-          />
-          <button class="submit5">Submit</button>
-        </div>
-      </div>
-      <div class="card card6">
-        <div class="card-header">Weekend</div>
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control weekend"
-            placeholder="Add your task"
-          />
-          <button class="submit6">Submit</button>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div id="main" class="card">
+            <span class="card-title">Task List</span>
+            <div class="row">
+              <form class="task-form">
+                <div class="input-field col s12">
+                  <input type="text" name="task" class="task" />
+                  <label for="task">New Task</label>
+                  <input type="submit" value="Add Task" class="btn" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card-action">
+            <h4>Tasks</h4>
+            <div class="input-field col s12">
+              <input type="text" name="filter" class="filter" />
+              <label for="filter">Filter Tasks</label>
+            </div>
+            <ul class="collection"></ul>
+            <a href="#" class="clear-tasks btn black">Clear Tasks</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="addNotes">
-      <div class="card card7">
-        <div class="card-header">Top 4 things to do</div>
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control things"
-            placeholder="Add your task"
-          />
-          <button class="submit7">Submit</button>
-        </div>
-      </div>
-      <div class="card card8">
-        <div class="card-header">Notes</div>
-        <div class="form-group">
-          <input
-            type="text"
-            class="form-control cardNotes"
-            placeholder="Add your task"
-          />
-          <button class="submit8">Submit</button>
-        </div>
-      </div>
-    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
